@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ping Pong</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 300;
+      }
+      h1 {
+        font-size: 700;
+      }
+      #playground{
+        margin-top: 2em;
+        background: #222222;
+        width: 400px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      #ball {
+        background: #CF000F;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 150px;
+        top: 100px;
+        border-radius: 10px;
+      }
+      .paddle {
+        background: #F4D03F;
+        left: 50px;
+        top: 70px;
+        position: absolute;
+        width: 30px;
+        height: 70px;
+        /*rounded corners*/
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+      }
+      #paddleB {
+        left: 320px;
+      }
+      header > h1 {
+        text-align: center;
+      }
+      #game > *{
+        margin: 0 auto;
+      }
+      #scoreboard {
+        margin: 0 auto;
+        width: 400px;
+        overflow: hidden;
+        background-color: #333333;
+      }
+      #playerA {
+        color: white;
+        float: left;
+        padding-left: 1em;
+      }
+      #playerB {
+        color: white;
+        float: right;
+        padding-right: 1em;
+      }
+      .score > span {
+        font-weight: bold;
+        color: #F4D03F;
+      }
+      footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <h1>EXTREME PING PONG</h1>
+    </header>
+    
+    <div id="scoreboard">
+      <div class="score" id="playerA">Player A : <span id="scoreA">0</span></div>
+      <div class="score" id="playerB">Player B : <span id="scoreB">0</span></div>
+    </div>
+    
+    <div id="game">
+      <div id="playground">
+        <div id="paddleA" class="paddle"></div>
+        <div id="paddleB" class="paddle"></div>
+        <div id="ball"></div>
+      </div>
+    </div>
+    
+    <footer>
+      The first player with 10 points wins!
+    </footer>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/pingpong.js"></script>
+    <script>
+      $(function(){
+        alert("Welcome to the Ping Pong Turbo battle.");
+      });
+    </script>
+  </body>
+</html>
